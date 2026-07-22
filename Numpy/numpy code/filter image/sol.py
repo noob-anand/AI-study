@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+img = plt.imread('dc_metro.png')
+
+def smooth(img):
+    avg_img =(    img[1:-1 ,1:-1]  # center
+                + img[ :-2 ,1:-1]  # top
+                + img[2:   ,1:-1]  # bottom
+                + img[1:-1 , :-2]  # left
+                + img[1:-1 ,2:  ]  # right
+                ) / 5.0
+    return avg_img
+
+avg_img = smooth(img)

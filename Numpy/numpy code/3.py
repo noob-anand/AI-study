@@ -1,0 +1,9 @@
+import numpy as np
+
+a=np.array([1,2,3,4])
+b=np.array([5,6,7,8])
+
+# universal functions
+print(np.add(a,b))
+print(np.multiply(a,b))
+print(np.sin(a))
